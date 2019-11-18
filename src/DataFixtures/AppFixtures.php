@@ -70,6 +70,7 @@ class AppFixtures extends Fixture
       }
       // Nous gérons les annonces
         for($i = 1;$i <= 30; $i++){
+       
         $ad = new Ad();
         $title = $faker->sentence();
         $coverImage = $faker->imageUrl(1000,350);
@@ -86,8 +87,7 @@ class AppFixtures extends Fixture
            ->setAuthor($user);
         // $product = new Product();
         // $manager->persist($product);
-        $manager->persist($ad);
-        }
+       
         //image
         for($j = 1;$j <= mt_rand(2,5); $j++){
             $image = new Image();
@@ -126,17 +126,23 @@ class AppFixtures extends Fixture
 
                             $manager->persist($booking);
 
-                            //Gestion des ommentaires
+                            //Gestion des commentaires
                             if(mt_rand(0,1)){
                                 $comment = new Comment();
                                 $comment->setContent($faker->paragraph())
                                         ->setRating(mt_rand(1,5))
                                         ->setAuthor($booker)
                                         ->setAd($ad);
+
                                         $manager->persist($comment);
                             }
-
+                        
                 }
-        $manager->flush();
-    }
+                $manager->persist($ad);
+            }  
+
+                $manager->flush();    
+    
+        }
+   
 }

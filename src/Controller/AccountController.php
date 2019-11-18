@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controller;
-
+use App\Entity\Ad;
 use App\Entity\PasswordUpdate;
 use App\Entity\User;
 use App\Form\AccountType;

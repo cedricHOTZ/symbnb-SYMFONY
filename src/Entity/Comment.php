@@ -46,11 +46,12 @@ class Comment
 
     /**
      * Permet de mettre en place la date de création
+     * @ORM\prePersist
      */
 
      public function prePersist(){
        if(empty($this->createdAt)){
-           $this->created = new \DateTime();
+           $this->createdAt = new \DateTime();
        }
      }
 

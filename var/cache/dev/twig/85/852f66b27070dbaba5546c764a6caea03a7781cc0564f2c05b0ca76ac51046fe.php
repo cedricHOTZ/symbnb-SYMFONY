@@ -52,11 +52,11 @@ class __TwigTemplate_061a4e66469dff2ee3bd74673147634a5ca9d1e5c3c8a95549ff0a15d68
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        
-  
-        
+
+        <link rel=\"stylesheet\" href=\"/css/fontawesome/css/all.css\"/>
          <link rel=\"stylesheet\" href=\"/css/app.css\"/>
          <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+        
          ";
         // line 11
         $this->displayBlock('stylesheets', $context, $blocks);
@@ -197,11 +197,11 @@ class __TwigTemplate_061a4e66469dff2ee3bd74673147634a5ca9d1e5c3c8a95549ff0a15d68
     <head>
         <meta charset=\"UTF-8\">
         <title>SymBNB - {% block title %}Welcome!{% endblock %}</title>
-        
-  
-        
+
+        <link rel=\"stylesheet\" href=\"/css/fontawesome/css/all.css\"/>
          <link rel=\"stylesheet\" href=\"/css/app.css\"/>
          <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+        
          {% block stylesheets %}{% endblock %}
     </head>
     <body>
