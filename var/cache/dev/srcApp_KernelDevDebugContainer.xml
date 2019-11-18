@@ -4959,10 +4959,11 @@
         <argument key="manager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.l8ZYTzR" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.SjZfX2U" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="booking" type="service" id=".errored..service_locator.l8ZYTzR.App\Entity\Booking"/>
+        <argument key="booking" type="service" id=".errored..service_locator.SjZfX2U.App\Entity\Booking"/>
+        <argument key="manager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
     <service id=".service_locator.wypGnUQ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -4971,7 +4972,7 @@
         <argument key="user" type="service" id=".errored..service_locator.wypGnUQ.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.fE97tf_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.qocoqFt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountController::login" type="service" id=".service_locator.oHXyyai"/>
@@ -4984,7 +4985,7 @@
         <argument key="App\Controller\AdController::index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\AdController::show" type="service" id=".service_locator.YIUCPlB"/>
         <argument key="App\Controller\BookingController::book" type="service" id=".service_locator.0c_I6Iz"/>
-        <argument key="App\Controller\BookingController::show" type="service" id=".service_locator.l8ZYTzR"/>
+        <argument key="App\Controller\BookingController::show" type="service" id=".service_locator.SjZfX2U"/>
         <argument key="App\Controller\UserController::index" type="service" id=".service_locator.wypGnUQ"/>
         <argument key="App\Controller\AccountController:login" type="service" id=".service_locator.oHXyyai"/>
         <argument key="App\Controller\AccountController:profile" type="service" id=".service_locator.Txvqv4R"/>
@@ -4996,7 +4997,7 @@
         <argument key="App\Controller\AdController:index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\AdController:show" type="service" id=".service_locator.YIUCPlB"/>
         <argument key="App\Controller\BookingController:book" type="service" id=".service_locator.0c_I6Iz"/>
-        <argument key="App\Controller\BookingController:show" type="service" id=".service_locator.l8ZYTzR"/>
+        <argument key="App\Controller\BookingController:show" type="service" id=".service_locator.SjZfX2U"/>
         <argument key="App\Controller\UserController:index" type="service" id=".service_locator.wypGnUQ"/>
       </argument>
     </service>
@@ -5413,12 +5414,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.fE97tf_"/>
+      <argument type="service" id=".service_locator.qocoqFt"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.fE97tf_"/>
+      <argument type="service" id=".service_locator.qocoqFt"/>
     </service>
     <service id=".service_locator.UwRI0uT" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
@@ -5444,7 +5445,7 @@
     </service>
     <service id=".errored..service_locator.YIUCPlB.App\Entity\Ad" class="App\Entity\Ad"/>
     <service id=".errored..service_locator.0c_I6Iz.App\Entity\Ad" class="App\Entity\Ad"/>
-    <service id=".errored..service_locator.l8ZYTzR.App\Entity\Booking" class="App\Entity\Booking"/>
+    <service id=".errored..service_locator.SjZfX2U.App\Entity\Booking" class="App\Entity\Booking"/>
     <service id=".errored..service_locator.wypGnUQ.App\Entity\User" class="App\Entity\User"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.JgKnBZT"/>
@@ -5797,7 +5798,7 @@
     <service id="Twig\Environment" alias="twig" public="false"/>
     <service id="logger" alias="monolog.logger"/>
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.fE97tf_"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.qocoqFt"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="validator" alias="debug.validator" public="true"/>
