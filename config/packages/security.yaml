@@ -1,0 +1,43 @@
+security:
+    # hashage du mot de passe
+    encoders:
+        App\Entity\User:
+            algorithm: auto
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        in_memory: { memory: null }
+        #récupère les utilisateurs de la bdd
+        in_database:
+            entity:
+                class: App\Entity\User
+                #authentification pour savoir si l email va avec le mot de passe
+                property: email
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+
+            provider: in_database
+
+            form_login:
+                login_path: account_login
+                check_path: account_login
+           
+                #deconnexion
+            logout:
+                path: account_logout
+                target: account_login
+
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#firewalls-authentication
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        # - { path: ^/admin, roles: ROLE_ADMIN }
+        # - { path: ^/profile, roles: ROLE_USER }

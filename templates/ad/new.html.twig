@@ -1,0 +1,22 @@
+{% extends 'base.html.twig'%}
+{% block title %}Création d'une annonce{% endblock %}
+
+{# appel du template#}
+{% form_theme form 'ad/_collection.html.twig' %}
+
+{% block body %}
+<h1>Créer une nouvelle annonce</h1>
+
+{{form_start(form)}}
+
+{{form_widget(form)}}
+
+<button type="submit" class="btn btn-primary">Créer la nouvelle annonce</button>
+
+{{form_end(form)}}
+{% endblock %}
+
+{% block javascripts %}
+<script src="/js/ad.js"></script>
+{% endblock %}
+

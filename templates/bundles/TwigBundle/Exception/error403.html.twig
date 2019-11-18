@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Vous n'avez pas le droit d'acceder à cette page{% endblock %}
+
+{% block body %}
+
+<h1>Alors? tu fais quoi la! tu na pas le droit dêtre la</h1>
+
+{{ exception.message }}
+<a href="{{path('homepage')}}"class="btn btn-primary">retour à l'accueil</a>
+{% endblock %}
