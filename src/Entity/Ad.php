@@ -109,6 +109,20 @@ class Ad
             $this->slug = $slugify->slugify($this->title);
         }
     }
+
+     //function pour afficher la moyenne des notes des avis
+     
+    public function getAvgRatings(){
+        //Calculer la somme des notations
+        $sum = array_reduce($this->comments->toArray(), function($total, $comment){
+            return $total + $comment->getRating();
+        },0);
+
+        //Faire la division pour avoir la moyenne
+        if(count($this->comments) > 0) return $sum/ count($this->comments);
+
+        return 0;
+    }
    /**
     * Permet d'obtenir un tableau des jours qui ne sont pas disponible pour cette annonce
     */
