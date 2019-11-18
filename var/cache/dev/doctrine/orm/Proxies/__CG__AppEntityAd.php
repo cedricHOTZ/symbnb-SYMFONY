@@ -64,10 +64,10 @@ class Ad extends \App\Entity\Ad implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'title', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'price', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'introduction', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'content', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'coverImage', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'rooms', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'images', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'author', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'bookings'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'title', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'price', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'introduction', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'content', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'coverImage', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'rooms', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'images', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'author', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'bookings', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'comments'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'title', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'price', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'introduction', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'content', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'coverImage', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'rooms', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'images', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'author', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'bookings'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'title', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'price', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'introduction', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'content', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'coverImage', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'rooms', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'images', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'author', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'bookings', '' . "\0" . 'App\\Entity\\Ad' . "\0" . 'comments'];
     }
 
     /**
@@ -182,6 +182,17 @@ class Ad extends \App\Entity\Ad implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'initializeSlug', []);
 
         return parent::initializeSlug();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAvgRatings()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAvgRatings', []);
+
+        return parent::getAvgRatings();
     }
 
     /**
@@ -450,6 +461,39 @@ class Ad extends \App\Entity\Ad implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeBooking', [$booking]);
 
         return parent::removeBooking($booking);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getComments(): \Doctrine\Common\Collections\Collection
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getComments', []);
+
+        return parent::getComments();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addComment(\App\Entity\Comment $comment): \App\Entity\Ad
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addComment', [$comment]);
+
+        return parent::addComment($comment);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeComment(\App\Entity\Comment $comment): \App\Entity\Ad
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeComment', [$comment]);
+
+        return parent::removeComment($comment);
     }
 
 }

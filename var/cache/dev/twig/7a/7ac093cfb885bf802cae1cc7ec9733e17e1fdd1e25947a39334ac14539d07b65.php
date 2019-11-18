@@ -206,7 +206,7 @@ class __TwigTemplate_2bb40f5a24bae15008a0c2be84e2ed64776f26241d777a5e2f0570dda4c
     });
     \$('#booking_startDate,#booking_endDate').on('change', calculateAmount);
 });
-//calculer le nombre total de nuit
+//calculer le nombre total de nuit et le prix 
  function calculateAmount(){
      // on chope les dates
 
@@ -308,7 +308,7 @@ class __TwigTemplate_2bb40f5a24bae15008a0c2be84e2ed64776f26241d777a5e2f0570dda4c
     });
     \$('#booking_startDate,#booking_endDate').on('change', calculateAmount);
 });
-//calculer le nombre total de nuit
+//calculer le nombre total de nuit et le prix 
  function calculateAmount(){
      // on chope les dates
 

@@ -441,6 +441,9 @@
       <tag name="form.type"/>
       <argument type="service" id="App\Form\DataTransformer\FrenchToDateTimeTransformer"/>
     </service>
+    <service id="App\Form\CommentType" class="App\Form\CommentType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\DataTransformer\FrenchToDateTimeTransformer" class="App\Form\DataTransformer\FrenchToDateTimeTransformer" autowire="true" autoconfigure="true"/>
     <service id="App\Form\ImageType" class="App\Form\ImageType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
@@ -814,6 +817,7 @@
         <argument>App\Form\AjouterAnnonceType</argument>
         <argument>App\Form\ApplicationType</argument>
         <argument>App\Form\BookingType</argument>
+        <argument>App\Form\CommentType</argument>
         <argument>App\Form\ImageType</argument>
         <argument>App\Form\PasswordUpdateType</argument>
         <argument>App\Form\RegistrationType</argument>
@@ -1082,7 +1086,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.4l9gifU"/>
+      <argument type="service" id=".service_locator.TP.emKl"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -2204,14 +2208,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -4740,6 +4736,8 @@
     <service id=".abstract.instanceof.App\Form\ApplicationType" class="App\Form\ApplicationType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BookingType" class="App\Form\BookingType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\BookingType" class="App\Form\BookingType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CommentType" class="App\Form\CommentType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\CommentType" class="App\Form\CommentType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ImageType" class="App\Form\ImageType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ImageType" class="App\Form\ImageType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PasswordUpdateType" class="App\Form\PasswordUpdateType" autowire="true" abstract="true"/>
@@ -5061,13 +5059,14 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.4l9gifU" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.TP.emKl" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\AccountType" type="service" id="App\Form\AccountType"/>
         <argument key="App\Form\AjouterAnnonceType" type="service" id="App\Form\AjouterAnnonceType"/>
         <argument key="App\Form\ApplicationType" type="service" id="App\Form\ApplicationType"/>
         <argument key="App\Form\BookingType" type="service" id="App\Form\BookingType"/>
+        <argument key="App\Form\CommentType" type="service" id="App\Form\CommentType"/>
         <argument key="App\Form\ImageType" type="service" id="App\Form\ImageType"/>
         <argument key="App\Form\PasswordUpdateType" type="service" id="App\Form\PasswordUpdateType"/>
         <argument key="App\Form\RegistrationType" type="service" id="App\Form\RegistrationType"/>

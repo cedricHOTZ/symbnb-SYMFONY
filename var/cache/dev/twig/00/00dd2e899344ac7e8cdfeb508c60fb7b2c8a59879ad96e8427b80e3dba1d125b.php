@@ -162,7 +162,7 @@ class __TwigTemplate_5abeab54e05d1d22f61f6b759e4ea5f22b9717d6b1d23a1241a817a6ea2
               <dt class=\"col-md-4\">Commentaire</dt>
               <dd class=\"col-md-8\">";
         // line 41
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["booking"]) || array_key_exists("booking", $context) ? $context["booking"] : (function () { throw new RuntimeError('Variable "booking" does not exist.', 41, $this->source); })()), "comment", [], "any", false, false, false, 41), "html", null, true);
+        echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, ($context["booking"] ?? null), "comment", [], "any", true, true, false, 41)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, ($context["booking"] ?? null), "comment", [], "any", false, false, false, 41), "Aucun commentaire")) : ("Aucun commentaire")), "html", null, true);
         echo "</dd>
           </dl>
           <hr>
@@ -203,6 +203,37 @@ class __TwigTemplate_5abeab54e05d1d22f61f6b759e4ea5f22b9717d6b1d23a1241a817a6ea2
         echo "</a>
         
       </div>
+      <div class=\"alert alert-light\">
+          <h2 class=\"alert-heading\">Votre avis compte !</h2>
+        
+          ";
+        // line 64
+        echo "           ";
+        // line 65
+        echo "          ";
+        if ((twig_date_converter($this->env) > twig_date_converter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["booking"]) || array_key_exists("booking", $context) ? $context["booking"] : (function () { throw new RuntimeError('Variable "booking" does not exist.', 65, $this->source); })()), "endDate", [], "any", false, false, false, 65)))) {
+            // line 66
+            echo "               ";
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 66, $this->source); })()), 'form_start');
+            echo "
+               ";
+            // line 67
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 67, $this->source); })()), 'widget');
+            echo "
+               <button type=\"submit\" class=\"btn btn-success\">Confirmer !</button>
+               ";
+            // line 69
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 69, $this->source); })()), 'form_end');
+            echo "
+          ";
+        } else {
+            // line 71
+            echo "          <p>Vous ne pourrai pas noter cette annonce tant que votre voyage ne sera pas complet</p>
+
+          ";
+        }
+        // line 74
+        echo "      </div>
     </div>
 
     <div class=\"col\">
@@ -210,26 +241,26 @@ class __TwigTemplate_5abeab54e05d1d22f61f6b759e4ea5f22b9717d6b1d23a1241a817a6ea2
             <h2 class=\"alert-heading\">Votre hébergement</h2>
             <h4>
              <a href=\"";
-        // line 66
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ads_show", ["slug" => twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 66, $this->source); })()), "slug", [], "any", false, false, false, 66)]), "html", null, true);
+        // line 81
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ads_show", ["slug" => twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 81, $this->source); })()), "slug", [], "any", false, false, false, 81)]), "html", null, true);
         echo "\">";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 66, $this->source); })()), "title", [], "any", false, false, false, 66), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 81, $this->source); })()), "title", [], "any", false, false, false, 81), "html", null, true);
         echo "</a>
             </h4>
             <img src=\"";
-        // line 68
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 68, $this->source); })()), "coverImage", [], "any", false, false, false, 68), "html", null, true);
+        // line 83
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 83, $this->source); })()), "coverImage", [], "any", false, false, false, 83), "html", null, true);
         echo "\" alt=\"Image de ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 68, $this->source); })()), "title", [], "any", false, false, false, 68), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 83, $this->source); })()), "title", [], "any", false, false, false, 83), "html", null, true);
         echo "\"class=\"img-fluid\">
             ";
-        // line 69
-        echo twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 69, $this->source); })()), "content", [], "any", false, false, false, 69);
+        // line 84
+        echo twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 84, $this->source); })()), "content", [], "any", false, false, false, 84);
         echo "
 
             <a href=\"";
-        // line 71
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ads_show", ["slug" => twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 71, $this->source); })()), "slug", [], "any", false, false, false, 71)]), "html", null, true);
+        // line 86
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ads_show", ["slug" => twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 86, $this->source); })()), "slug", [], "any", false, false, false, 86)]), "html", null, true);
         echo "\"class=\"btn btn-primary\">plus d'informations</a>
         </div>
 
@@ -256,7 +287,7 @@ class __TwigTemplate_5abeab54e05d1d22f61f6b759e4ea5f22b9717d6b1d23a1241a817a6ea2
 
     public function getDebugInfo()
     {
-        return array (  232 => 71,  227 => 69,  221 => 68,  214 => 66,  200 => 57,  196 => 56,  190 => 53,  183 => 51,  174 => 47,  165 => 41,  160 => 39,  155 => 37,  150 => 35,  145 => 33,  140 => 31,  132 => 25,  122 => 20,  113 => 16,  106 => 11,  104 => 10,  100 => 9,  97 => 8,  95 => 7,  93 => 6,  90 => 5,  80 => 4,  59 => 2,  36 => 1,);
+        return array (  263 => 86,  258 => 84,  252 => 83,  245 => 81,  236 => 74,  231 => 71,  226 => 69,  221 => 67,  216 => 66,  213 => 65,  211 => 64,  200 => 57,  196 => 56,  190 => 53,  183 => 51,  174 => 47,  165 => 41,  160 => 39,  155 => 37,  150 => 35,  145 => 33,  140 => 31,  132 => 25,  122 => 20,  113 => 16,  106 => 11,  104 => 10,  100 => 9,  97 => 8,  95 => 7,  93 => 6,  90 => 5,  80 => 4,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -301,7 +332,7 @@ class __TwigTemplate_5abeab54e05d1d22f61f6b759e4ea5f22b9717d6b1d23a1241a817a6ea2
               <dt class=\"col-md-4\">Montant total</dt>
               <dd class=\"col-md-8\">{{booking.amount}}&euro;</dd>
               <dt class=\"col-md-4\">Commentaire</dt>
-              <dd class=\"col-md-8\">{{booking.comment}}</dd>
+              <dd class=\"col-md-8\">{{booking.comment | default('Aucun commentaire')}}</dd>
           </dl>
           <hr>
           <h2 class=\"alert-heading\">Votre hôte</h2>
@@ -319,6 +350,21 @@ class __TwigTemplate_5abeab54e05d1d22f61f6b759e4ea5f22b9717d6b1d23a1241a817a6ea2
               {{author.description|raw}}
               <a href=\"{{path(\"user_show\",{'slug':author.slug})}}\" class=\"btn btn-primary\">Plus d'onfos sur {{author.firstName}}</a>
         
+      </div>
+      <div class=\"alert alert-light\">
+          <h2 class=\"alert-heading\">Votre avis compte !</h2>
+        
+          {# affichage du formulaire de notation  apres la date de retour#}
+           {# function date de php #}
+          {% if date() > date(booking.endDate) %}
+               {{form_start(form)}}
+               {{form_widget(form)}}
+               <button type=\"submit\" class=\"btn btn-success\">Confirmer !</button>
+               {{form_end(form)}}
+          {% else %}
+          <p>Vous ne pourrai pas noter cette annonce tant que votre voyage ne sera pas complet</p>
+
+          {% endif %}
       </div>
     </div>
 

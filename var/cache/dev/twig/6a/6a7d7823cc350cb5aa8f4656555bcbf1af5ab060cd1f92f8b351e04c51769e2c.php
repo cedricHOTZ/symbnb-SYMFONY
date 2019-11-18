@@ -54,49 +54,65 @@ class __TwigTemplate_f9a0941bd32ef56b5cb071ab79c989b401a49616687df4fec094a759a9c
         echo "<strong>";
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 7, $this->source); })()), "price", [], "any", false, false, false, 7), "html", null, true);
         echo "&euro;/nuit</strong> <br>
-               <small> Pas encore noté</small>
+         
+              ";
+        // line 10
+        echo "               ";
+        if ((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 10, $this->source); })()), "comments", [], "any", false, false, false, 10)) > 0)) {
+            // line 11
+            echo "              ";
+            $this->loadTemplate("partials/rating.html.twig", "ad/_ad.html.twig", 11)->display(twig_array_merge($context, ["rating" => twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 11, $this->source); })()), "avgRatings", [], "any", false, false, false, 11)]));
+            // line 12
+            echo "               ";
+        } else {
+            // line 13
+            echo "               <small>Pas encore noté</small>
+               ";
+        }
+        // line 15
+        echo "          
           </div>
           <a href=\"";
-        // line 10
-        echo twig_escape_filter($this->env, (isset($context["url"]) || array_key_exists("url", $context) ? $context["url"] : (function () { throw new RuntimeError('Variable "url" does not exist.', 10, $this->source); })()), "html", null, true);
+        // line 17
+        echo twig_escape_filter($this->env, (isset($context["url"]) || array_key_exists("url", $context) ? $context["url"] : (function () { throw new RuntimeError('Variable "url" does not exist.', 17, $this->source); })()), "html", null, true);
         echo "\">
           <img src=\"";
-        // line 11
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 11, $this->source); })()), "coverImage", [], "any", false, false, false, 11), "html", null, true);
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 18, $this->source); })()), "coverImage", [], "any", false, false, false, 18), "html", null, true);
         echo "\" alt=\"image de l'appartement\" style=\"height: 200px;width: 100%; display: block\">
           </a>
           <div class=\"card-bod\">
           <h4 class=\"card-title\">
           <a href=\"";
-        // line 15
-        echo twig_escape_filter($this->env, (isset($context["url"]) || array_key_exists("url", $context) ? $context["url"] : (function () { throw new RuntimeError('Variable "url" does not exist.', 15, $this->source); })()), "html", null, true);
+        // line 22
+        echo twig_escape_filter($this->env, (isset($context["url"]) || array_key_exists("url", $context) ? $context["url"] : (function () { throw new RuntimeError('Variable "url" does not exist.', 22, $this->source); })()), "html", null, true);
         echo "\">
           ";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 16, $this->source); })()), "title", [], "any", false, false, false, 16), "html", null, true);
+        // line 23
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 23, $this->source); })()), "title", [], "any", false, false, false, 23), "html", null, true);
         echo "</a></h4>
           <p class=\"card-text\">
           ";
-        // line 18
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 18, $this->source); })()), "introduction", [], "any", false, false, false, 18), "html", null, true);
+        // line 25
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 25, $this->source); })()), "introduction", [], "any", false, false, false, 25), "html", null, true);
         echo "
           </p>
           <a href=\"";
-        // line 20
-        echo twig_escape_filter($this->env, (isset($context["url"]) || array_key_exists("url", $context) ? $context["url"] : (function () { throw new RuntimeError('Variable "url" does not exist.', 20, $this->source); })()), "html", null, true);
+        // line 27
+        echo twig_escape_filter($this->env, (isset($context["url"]) || array_key_exists("url", $context) ? $context["url"] : (function () { throw new RuntimeError('Variable "url" does not exist.', 27, $this->source); })()), "html", null, true);
         echo "\" class=\"btn btn-secondary\">En savoir plus</a>
 
        
           ";
-        // line 23
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23) && (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23) == twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 23, $this->source); })()), "author", [], "any", false, false, false, 23)))) {
-            // line 24
+        // line 30
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 30, $this->source); })()), "user", [], "any", false, false, false, 30) && (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 30, $this->source); })()), "user", [], "any", false, false, false, 30) == twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 30, $this->source); })()), "author", [], "any", false, false, false, 30)))) {
+            // line 31
             echo "          <a href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ads_edit", ["slug" => twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 24, $this->source); })()), "slug", [], "any", false, false, false, 24)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ads_edit", ["slug" => twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 31, $this->source); })()), "slug", [], "any", false, false, false, 31)]), "html", null, true);
             echo "\" class=\"btn btn-secondary\">Modifier lannonce</a>
           ";
         }
-        // line 26
+        // line 33
         echo "
           </div>
         </div>
@@ -121,7 +137,7 @@ class __TwigTemplate_f9a0941bd32ef56b5cb071ab79c989b401a49616687df4fec094a759a9c
 
     public function getDebugInfo()
     {
-        return array (  100 => 26,  94 => 24,  92 => 23,  86 => 20,  81 => 18,  76 => 16,  72 => 15,  65 => 11,  61 => 10,  53 => 7,  48 => 4,  46 => 3,  43 => 1,);
+        return array (  116 => 33,  110 => 31,  108 => 30,  102 => 27,  97 => 25,  92 => 23,  88 => 22,  81 => 18,  77 => 17,  73 => 15,  69 => 13,  66 => 12,  63 => 11,  60 => 10,  53 => 7,  48 => 4,  46 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -133,7 +149,14 @@ class __TwigTemplate_f9a0941bd32ef56b5cb071ab79c989b401a49616687df4fec094a759a9c
       <div class=\"card bg-light mb-3\">
           <div class=\"card-header text-center\">
               {{ ad.rooms}}<strong>{{ad.price}}&euro;/nuit</strong> <br>
-               <small> Pas encore noté</small>
+         
+              {# affichage des notations étoile #}
+               {% if ad.comments|length > 0 %}
+              {% include 'partials/rating.html.twig'with{'rating':ad.avgRatings}%}
+               {% else %}
+               <small>Pas encore noté</small>
+               {% endif %}
+          
           </div>
           <a href=\"{{ url }}\">
           <img src=\"{{ ad.coverImage }}\" alt=\"image de l'appartement\" style=\"height: 200px;width: 100%; display: block\">
