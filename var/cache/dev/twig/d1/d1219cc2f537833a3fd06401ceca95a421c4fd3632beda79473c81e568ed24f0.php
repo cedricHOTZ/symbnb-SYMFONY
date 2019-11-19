@@ -24,16 +24,10 @@ class __TwigTemplate_efb703fe1db7659e8721fae001365ff57450fb10788f335d4e1c5817b7a
 
         $this->source = $this->getSourceContext();
 
-        $this->blocks = [
-            'title' => [$this, 'block_title'],
-            'body' => [$this, 'block_body'],
-        ];
-    }
+        $this->parent = false;
 
-    protected function doGetParent(array $context)
-    {
-        // line 1
-        return "base.html.twig";
+        $this->blocks = [
+        ];
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,75 +39,82 @@ class __TwigTemplate_efb703fe1db7659e8721fae001365ff57450fb10788f335d4e1c5817b7a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/account/login.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "admin/account/login.html.twig", 1);
-        $this->parent->display($context, array_merge($this->blocks, $blocks));
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+        // line 1
+        echo "<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
+    <title>Connexion à l'administration</title>
+    <link rel=\"stylesheet\" href=\"/css/fontawesome/css/all.css\"/>
+    <link rel=\"stylesheet\" href=\"/css/app.css\"/>
+    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
 
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-    }
-
-    // line 3
-    public function block_title($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
-
-        echo "Hello AdminAccountController!";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
 
     }
-
-    // line 5
-    public function block_body($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
-
-        // line 6
-        echo "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .card{
+        margin-top: 10%;
+    }
 </style>
 
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/Users/macbook/Desktop/symfony-udemy/src/Controller/AdminAccountController.php", 0), "html", null, true);
-        echo "\">src/Controller/AdminAccountController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/Users/macbook/Desktop/symfony-udemy/templates/admin_account/index.html.twig", 0), "html", null, true);
-        echo "\">templates/admin_account/index.html.twig</a></code></li>
-    </ul>
-</div>
-";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
+</head>
+<body>
+    <div class=\"col-md-4\">
+    <div class=\"card bg-light\">
+        <div class=\"card-header\">
+            <h4 class=\"card-title\">
+<i class=\"fas fa-lock\"></i>Connexion à l'administration
+            </h4>
+        </div>
+        <div class=\"card-body\">
+            ";
+        // line 34
+        if ((isset($context["hasError"]) || array_key_exists("hasError", $context) ? $context["hasError"] : (function () { throw new RuntimeError('Variable "hasError" does not exist.', 34, $this->source); })())) {
+            // line 35
+            echo "              <div class=\"alert alert-warning\">
+                  <p>Les informations que vous avez fournies ne sont pas bonnes</p>
+              </div>
+              ";
+        }
+        // line 39
+        echo "            <form method=\"post\">
+                <div class=\"form-group\"><label for=\"_username\">Email</label><input type=\"text\" 
+                    class=\"form-control\" placeholder=\"Adresse email\" name=\"_username\" value=\"";
+        // line 41
+        echo twig_escape_filter($this->env, (isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new RuntimeError('Variable "username" does not exist.', 41, $this->source); })()), "html", null, true);
+        echo "\"></div>
+                    <div class=\"form-group\"><label for=\"_password\">Mot de passe</label><input type=\"password\" 
+                        class=\"form-control\" placeholder=\"Votre mot de passe\" name=\"_password\"></div>
+                        <div class=\"form-group\">
+                            <button type=\"submit\" class=\"btn btn-primary\">
+                                <i class=\"fas fa-lock-open\"></i>
+                                Connexion
+                            </button>
+                            <a href=\"";
+        // line 49
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("homepage");
+        echo "\" class=\"btn btn-link\">
+                                <i class=\"fas fa-arrow-circle-left\"></i>
+                               Retour au site
+                            </a>
+                        </div>
+                        </form>
+            </form>
+        </div>
+    </div>
+</body>
+</html>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
@@ -129,31 +130,69 @@ class __TwigTemplate_efb703fe1db7659e8721fae001365ff57450fb10788f335d4e1c5817b7a
 
     public function getDebugInfo()
     {
-        return array (  107 => 17,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  101 => 49,  90 => 41,  86 => 39,  80 => 35,  78 => 34,  43 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
+    <title>Connexion à l'administration</title>
+    <link rel=\"stylesheet\" href=\"/css/fontawesome/css/all.css\"/>
+    <link rel=\"stylesheet\" href=\"/css/app.css\"/>
+    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
 
-{% block title %}Hello AdminAccountController!{% endblock %}
-
-{% block body %}
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    body{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+
+    }
+    .card{
+        margin-top: 10%;
+    }
 </style>
 
-<div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ '/Users/macbook/Desktop/symfony-udemy/src/Controller/AdminAccountController.php'|file_link(0) }}\">src/Controller/AdminAccountController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ '/Users/macbook/Desktop/symfony-udemy/templates/admin_account/index.html.twig'|file_link(0) }}\">templates/admin_account/index.html.twig</a></code></li>
-    </ul>
-</div>
-{% endblock %}
-", "admin/account/login.html.twig", "/Users/macbook/Desktop/symfony-udemy/templates/admin/account/login.html.twig");
+</head>
+<body>
+    <div class=\"col-md-4\">
+    <div class=\"card bg-light\">
+        <div class=\"card-header\">
+            <h4 class=\"card-title\">
+<i class=\"fas fa-lock\"></i>Connexion à l'administration
+            </h4>
+        </div>
+        <div class=\"card-body\">
+            {% if hasError %}
+              <div class=\"alert alert-warning\">
+                  <p>Les informations que vous avez fournies ne sont pas bonnes</p>
+              </div>
+              {% endif %}
+            <form method=\"post\">
+                <div class=\"form-group\"><label for=\"_username\">Email</label><input type=\"text\" 
+                    class=\"form-control\" placeholder=\"Adresse email\" name=\"_username\" value=\"{{username}}\"></div>
+                    <div class=\"form-group\"><label for=\"_password\">Mot de passe</label><input type=\"password\" 
+                        class=\"form-control\" placeholder=\"Votre mot de passe\" name=\"_password\"></div>
+                        <div class=\"form-group\">
+                            <button type=\"submit\" class=\"btn btn-primary\">
+                                <i class=\"fas fa-lock-open\"></i>
+                                Connexion
+                            </button>
+                            <a href=\"{{path('homepage')}}\" class=\"btn btn-link\">
+                                <i class=\"fas fa-arrow-circle-left\"></i>
+                               Retour au site
+                            </a>
+                        </div>
+                        </form>
+            </form>
+        </div>
+    </div>
+</body>
+</html>", "admin/account/login.html.twig", "/Users/macbook/Desktop/symfony-udemy/templates/admin/account/login.html.twig");
     }
 }

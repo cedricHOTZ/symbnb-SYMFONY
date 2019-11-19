@@ -115,7 +115,7 @@ class __TwigTemplate_59f1d8b1b7d795458913ac301663c0afe2ea4bcaa367a3b2ad48a083e82
                    
                  <a href=\"";
             // line 43
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("account_logout");
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_account_logout");
             echo "\" class=\"dropdown-item\">Déconnexion</a>
              </div>
          </li>
@@ -228,7 +228,7 @@ class __TwigTemplate_59f1d8b1b7d795458913ac301663c0afe2ea4bcaa367a3b2ad48a083e82
              </a>
              <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"accountDropdownLink\">
                    
-                 <a href=\"{{path('account_logout')}}\" class=\"dropdown-item\">Déconnexion</a>
+                 <a href=\"{{path('admin_account_logout')}}\" class=\"dropdown-item\">Déconnexion</a>
              </div>
          </li>
         

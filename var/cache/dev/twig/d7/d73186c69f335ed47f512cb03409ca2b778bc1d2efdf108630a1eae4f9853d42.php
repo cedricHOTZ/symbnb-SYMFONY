@@ -110,7 +110,7 @@ class __TwigTemplate_802f2673a2facbbed05e680d705c658e01b2d2f201ef7ffdc38dac18224
         foreach ($context['_seq'] as $context["_key"] => $context["booking"]) {
             // line 12
             echo "<div class=\"row mt-5\">
-    <div class=\"col-4\">
+    <div class=\"col-md-4\">
         <img src=\"";
             // line 14
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["booking"], "ad", [], "any", false, false, false, 14), "coverImage", [], "any", false, false, false, 14), "html", null, true);
@@ -142,7 +142,7 @@ class __TwigTemplate_802f2673a2facbbed05e680d705c658e01b2d2f201ef7ffdc38dac18224
             // line 24
             echo "        </div>
     </div>
-    <div class=\"col-8\">
+    <div class=\"col-md-8\">
         <h4>";
             // line 27
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["booking"], "ad", [], "any", false, false, false, 27), "title", [], "any", false, false, false, 27), "html", null, true);
@@ -158,7 +158,7 @@ class __TwigTemplate_802f2673a2facbbed05e680d705c658e01b2d2f201ef7ffdc38dac18224
             echo " au ";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["booking"], "endDate", [], "any", false, false, false, 30), "d/m/y"), "html", null, true);
             echo " (";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["booking"], "amount", [], "any", false, false, false, 30), "html", null, true);
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["booking"], "amount", [], "any", false, false, false, 30), 2, ",", ""), "html", null, true);
             echo " &euro;)
     </p>
     <a href=\"";
@@ -220,7 +220,7 @@ class __TwigTemplate_802f2673a2facbbed05e680d705c658e01b2d2f201ef7ffdc38dac18224
 
 {% for booking in app.user.bookings %}
 <div class=\"row mt-5\">
-    <div class=\"col-4\">
+    <div class=\"col-md-4\">
         <img src=\"{{booking.ad.coverImage}}\" alt=\"Photo de l'annonce{{booking.ad.title}}\" class=\"img-fluid\">
         <div class=\"mt-3\">
 
@@ -233,11 +233,11 @@ class __TwigTemplate_802f2673a2facbbed05e680d705c658e01b2d2f201ef7ffdc38dac18224
             {% endif %}
         </div>
     </div>
-    <div class=\"col-8\">
+    <div class=\"col-md-8\">
         <h4>{{booking.ad.title}}</h4>
     <p>
         Réservation<strong>n°{{booking.id}}</strong><br/>
-        du{{booking.startDate| date('d/m/y')}} au {{booking.endDate|date('d/m/y')}} ({{booking.amount}} &euro;)
+        du{{booking.startDate| date('d/m/y')}} au {{booking.endDate|date('d/m/y')}} ({{booking.amount|number_format(2,',','')}} &euro;)
     </p>
     <a href=\"{{path('booking_show', {'id':booking.id}) }}\" class=\"btn btn-info\">Plus d'informations</a>
     </div>

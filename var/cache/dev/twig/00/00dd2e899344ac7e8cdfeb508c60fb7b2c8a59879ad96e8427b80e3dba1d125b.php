@@ -157,7 +157,7 @@ class __TwigTemplate_5abeab54e05d1d22f61f6b759e4ea5f22b9717d6b1d23a1241a817a6ea2
               <dt class=\"col-md-4\">Montant total</dt>
               <dd class=\"col-md-8\">";
         // line 39
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["booking"]) || array_key_exists("booking", $context) ? $context["booking"] : (function () { throw new RuntimeError('Variable "booking" does not exist.', 39, $this->source); })()), "amount", [], "any", false, false, false, 39), "html", null, true);
+        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["booking"]) || array_key_exists("booking", $context) ? $context["booking"] : (function () { throw new RuntimeError('Variable "booking" does not exist.', 39, $this->source); })()), "amount", [], "any", false, false, false, 39), 2, ",", ""), "html", null, true);
         echo "&euro;</dd>
               <dt class=\"col-md-4\">Commentaire</dt>
               <dd class=\"col-md-8\">";
@@ -352,7 +352,7 @@ class __TwigTemplate_5abeab54e05d1d22f61f6b759e4ea5f22b9717d6b1d23a1241a817a6ea2
               <dt class=\"col-md-4\">Nombre de nuit</dt>
               <dd class=\"col-md-8\">{{booking.duration}}</dd>
               <dt class=\"col-md-4\">Montant total</dt>
-              <dd class=\"col-md-8\">{{booking.amount}}&euro;</dd>
+              <dd class=\"col-md-8\">{{booking.amount|number_format(2,',','')}}&euro;</dd>
               <dt class=\"col-md-4\">Commentaire</dt>
               <dd class=\"col-md-8\">{{booking.comment | default('Aucun commentaire')}}</dd>
           </dl>

@@ -110,10 +110,10 @@ class __TwigTemplate_2bb40f5a24bae15008a0c2be84e2ed64776f26241d777a5e2f0570dda4c
 
         // line 10
         echo "
-<h1>Réservez pour l'annonce:";
+<h1>Réservez pour l'annonce:<em>";
         // line 11
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 11, $this->source); })()), "title", [], "any", false, false, false, 11), "html", null, true);
-        echo "</h1>
+        echo "</em></h1>
 <p>Vous êtes sur le point de réserver le bien de <strong>";
         // line 12
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 12, $this->source); })()), "author", [], "any", false, false, false, 12), "fullName", [], "any", false, false, false, 12), "html", null, true);
@@ -123,7 +123,7 @@ class __TwigTemplate_2bb40f5a24bae15008a0c2be84e2ed64776f26241d777a5e2f0570dda4c
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), 'form_start');
         echo "
 <div class=\"alert alert-light\">
-    <h2>Commencez par nous dire quelles sont les dates qui vous intéressent</h2>
+    <h4>Commencez par nous dire quelles sont les dates qui vous intéressent</h4>
     <div class=\"row\">
         <div class=\"col\">
             ";
@@ -138,11 +138,11 @@ class __TwigTemplate_2bb40f5a24bae15008a0c2be84e2ed64776f26241d777a5e2f0570dda4c
         echo "
         </div>
     </div>
-    <h4>Montant du séjour: <span id=\"amount\">......</span> &euro;</h4>
+    <h4 class=\"mt-2\">Montant du séjour: <span id=\"amount\">......</span> &euro;</h4>
     <span id=\"days\">0</span> nuit(s) à ";
         // line 25
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 25, $this->source); })()), "price", [], "any", false, false, false, 25), "html", null, true);
-        echo " /nuit
+        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 25, $this->source); })()), "price", [], "any", false, false, false, 25), 2, ",", " "), "html", null, true);
+        echo "&euro; par nuit
     <h2>Vous avez un commentaire</h2>
     ";
         // line 27
@@ -265,11 +265,11 @@ class __TwigTemplate_2bb40f5a24bae15008a0c2be84e2ed64776f26241d777a5e2f0570dda4c
 
 {% block body %}
 
-<h1>Réservez pour l'annonce:{{ad.title}}</h1>
+<h1>Réservez pour l'annonce:<em>{{ad.title}}</em></h1>
 <p>Vous êtes sur le point de réserver le bien de <strong>{{ad.author.fullName}}</strong>, dites nous tout,on s'occupe du reste!</p>
 {{form_start(form)}}
 <div class=\"alert alert-light\">
-    <h2>Commencez par nous dire quelles sont les dates qui vous intéressent</h2>
+    <h4>Commencez par nous dire quelles sont les dates qui vous intéressent</h4>
     <div class=\"row\">
         <div class=\"col\">
             {{form_row(form.startDate)}}
@@ -278,8 +278,8 @@ class __TwigTemplate_2bb40f5a24bae15008a0c2be84e2ed64776f26241d777a5e2f0570dda4c
             {{form_row(form.endDate)}}
         </div>
     </div>
-    <h4>Montant du séjour: <span id=\"amount\">......</span> &euro;</h4>
-    <span id=\"days\">0</span> nuit(s) à {{ad.price}} /nuit
+    <h4 class=\"mt-2\">Montant du séjour: <span id=\"amount\">......</span> &euro;</h4>
+    <span id=\"days\">0</span> nuit(s) à {{ad.price|number_format(2, ',',' ')}}&euro; par nuit
     <h2>Vous avez un commentaire</h2>
     {{form_row(form.comment)}}
 </div>

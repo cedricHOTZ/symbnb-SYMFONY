@@ -3396,7 +3396,7 @@
       <argument type="service" id="security.token_storage" on-invalid="null"/>
       <call method="registerListener">
         <argument>admin</argument>
-        <argument>account_logout</argument>
+        <argument>admin_account_logout</argument>
         <argument>logout</argument>
         <argument>_csrf_token</argument>
         <argument>null</argument>
@@ -3852,7 +3852,7 @@
       <argument type="collection">
         <argument key="csrf_parameter">_csrf_token</argument>
         <argument key="csrf_token_id">logout</argument>
-        <argument key="logout_path">account_logout</argument>
+        <argument key="logout_path">admin_account_logout</argument>
       </argument>
       <call method="addHandler">
         <argument type="service" id="security.logout.handler.csrf_token_clearing"/>
@@ -5174,7 +5174,7 @@
         <argument key="user" type="service" id=".errored..service_locator.wypGnUQ.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.ROQyN57" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.wtEaMyA" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountController::login" type="service" id=".service_locator.oHXyyai"/>
@@ -5186,6 +5186,7 @@
         <argument key="App\Controller\AdController::edit" type="service" id=".service_locator.0c_I6Iz"/>
         <argument key="App\Controller\AdController::index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\AdController::show" type="service" id=".service_locator.YIUCPlB"/>
+        <argument key="App\Controller\AdminAccountController::login" type="service" id=".service_locator.oHXyyai"/>
         <argument key="App\Controller\AdminAdController::index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\BookingController::book" type="service" id=".service_locator.0c_I6Iz"/>
         <argument key="App\Controller\BookingController::show" type="service" id=".service_locator.SjZfX2U"/>
@@ -5199,6 +5200,7 @@
         <argument key="App\Controller\AdController:edit" type="service" id=".service_locator.0c_I6Iz"/>
         <argument key="App\Controller\AdController:index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\AdController:show" type="service" id=".service_locator.YIUCPlB"/>
+        <argument key="App\Controller\AdminAccountController:login" type="service" id=".service_locator.oHXyyai"/>
         <argument key="App\Controller\AdminAdController:index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\BookingController:book" type="service" id=".service_locator.0c_I6Iz"/>
         <argument key="App\Controller\BookingController:show" type="service" id=".service_locator.SjZfX2U"/>
@@ -5630,12 +5632,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.ROQyN57"/>
+      <argument type="service" id=".service_locator.wtEaMyA"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.ROQyN57"/>
+      <argument type="service" id=".service_locator.wtEaMyA"/>
     </service>
     <service id=".service_locator.UwRI0uT" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
@@ -6016,7 +6018,7 @@
     <service id="Twig\Environment" alias="twig" public="false"/>
     <service id="logger" alias="monolog.logger"/>
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.ROQyN57"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.wtEaMyA"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="validator" alias="debug.validator" public="true"/>
