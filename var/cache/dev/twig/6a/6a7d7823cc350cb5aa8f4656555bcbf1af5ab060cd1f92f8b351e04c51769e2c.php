@@ -52,7 +52,7 @@ class __TwigTemplate_f9a0941bd32ef56b5cb071ab79c989b401a49616687df4fec094a759a9c
         // line 7
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 7, $this->source); })()), "rooms", [], "any", false, false, false, 7), "html", null, true);
         echo "<strong>";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 7, $this->source); })()), "price", [], "any", false, false, false, 7), "html", null, true);
+        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ad"]) || array_key_exists("ad", $context) ? $context["ad"] : (function () { throw new RuntimeError('Variable "ad" does not exist.', 7, $this->source); })()), "price", [], "any", false, false, false, 7), 2, ",", ""), "html", null, true);
         echo "&euro;/nuit</strong> <br>
          
               ";
@@ -100,7 +100,7 @@ class __TwigTemplate_f9a0941bd32ef56b5cb071ab79c989b401a49616687df4fec094a759a9c
           <a href=\"";
         // line 27
         echo twig_escape_filter($this->env, (isset($context["url"]) || array_key_exists("url", $context) ? $context["url"] : (function () { throw new RuntimeError('Variable "url" does not exist.', 27, $this->source); })()), "html", null, true);
-        echo "\" class=\"btn btn-secondary\">En savoir plus</a>
+        echo "\" class=\"btn btn-primary\">En savoir plus</a>
 
        
           ";
@@ -148,7 +148,7 @@ class __TwigTemplate_f9a0941bd32ef56b5cb071ab79c989b401a49616687df4fec094a759a9c
 <div class=\"col-md-4\">
       <div class=\"card bg-light mb-3\">
           <div class=\"card-header text-center\">
-              {{ ad.rooms}}<strong>{{ad.price}}&euro;/nuit</strong> <br>
+              {{ ad.rooms}}<strong>{{ad.price| number_format(2, ',','')}}&euro;/nuit</strong> <br>
          
               {# affichage des notations étoile #}
                {% if ad.comments|length > 0 %}
@@ -168,7 +168,7 @@ class __TwigTemplate_f9a0941bd32ef56b5cb071ab79c989b401a49616687df4fec094a759a9c
           <p class=\"card-text\">
           {{ad.introduction}}
           </p>
-          <a href=\"{{ url }}\" class=\"btn btn-secondary\">En savoir plus</a>
+          <a href=\"{{ url }}\" class=\"btn btn-primary\">En savoir plus</a>
 
        
           {% if app.user and app.user == ad.author %}

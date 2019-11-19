@@ -403,6 +403,13 @@
         <argument type="service" id=".service_locator.CDOTD6..App\Controller\AdController"/>
       </call>
     </service>
+    <service id="App\Controller\AdminAdController" class="App\Controller\AdminAdController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CDOTD6..App\Controller\AdminAdController"/>
+      </call>
+    </service>
     <service id="App\Controller\BookingController" class="App\Controller\BookingController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -4717,6 +4724,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AdController" class="App\Controller\AdController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AdController" class="App\Controller\AdController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AdController" class="App\Controller\AdController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AdminAdController" class="App\Controller\AdminAdController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AdminAdController" class="App\Controller\AdminAdController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\AdminAdController" class="App\Controller\AdminAdController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BookingController" class="App\Controller\BookingController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BookingController" class="App\Controller\BookingController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\BookingController" class="App\Controller\BookingController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4972,7 +4982,7 @@
         <argument key="user" type="service" id=".errored..service_locator.wypGnUQ.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.qocoqFt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.ROQyN57" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountController::login" type="service" id=".service_locator.oHXyyai"/>
@@ -4984,6 +4994,7 @@
         <argument key="App\Controller\AdController::edit" type="service" id=".service_locator.0c_I6Iz"/>
         <argument key="App\Controller\AdController::index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\AdController::show" type="service" id=".service_locator.YIUCPlB"/>
+        <argument key="App\Controller\AdminAdController::index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\BookingController::book" type="service" id=".service_locator.0c_I6Iz"/>
         <argument key="App\Controller\BookingController::show" type="service" id=".service_locator.SjZfX2U"/>
         <argument key="App\Controller\UserController::index" type="service" id=".service_locator.wypGnUQ"/>
@@ -4996,6 +5007,7 @@
         <argument key="App\Controller\AdController:edit" type="service" id=".service_locator.0c_I6Iz"/>
         <argument key="App\Controller\AdController:index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\AdController:show" type="service" id=".service_locator.YIUCPlB"/>
+        <argument key="App\Controller\AdminAdController:index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\BookingController:book" type="service" id=".service_locator.0c_I6Iz"/>
         <argument key="App\Controller\BookingController:show" type="service" id=".service_locator.SjZfX2U"/>
         <argument key="App\Controller\UserController:index" type="service" id=".service_locator.wypGnUQ"/>
@@ -5303,6 +5315,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CDOTD6." method="withContext"/>
     </service>
+    <service id=".service_locator.CDOTD6..App\Controller\AdminAdController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\AdminAdController"/>
+      <argument>App\Controller\AdminAdController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CDOTD6." method="withContext"/>
+    </service>
     <service id=".service_locator.CDOTD6..App\Controller\BookingController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\BookingController"/>
       <argument>App\Controller\BookingController</argument>
@@ -5414,12 +5432,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.qocoqFt"/>
+      <argument type="service" id=".service_locator.ROQyN57"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.qocoqFt"/>
+      <argument type="service" id=".service_locator.ROQyN57"/>
     </service>
     <service id=".service_locator.UwRI0uT" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
@@ -5798,7 +5816,7 @@
     <service id="Twig\Environment" alias="twig" public="false"/>
     <service id="logger" alias="monolog.logger"/>
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.qocoqFt"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.ROQyN57"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="validator" alias="debug.validator" public="true"/>

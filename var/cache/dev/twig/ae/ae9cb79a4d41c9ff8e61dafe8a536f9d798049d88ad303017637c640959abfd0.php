@@ -85,9 +85,9 @@ class __TwigTemplate_6b94ae735e623246f11ed53bf43926f9e5efc998c9f7e6681a8ef8bc650
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<h1>Voici les annonces </h1>
+        echo "<h1 class=\"my-3\">Voici les annonces </h1>
 
-<div class=\"row\">
+<div class=\"row my-5\">
 ";
         // line 9
         $context['_parent'] = $context;
@@ -154,9 +154,9 @@ class __TwigTemplate_6b94ae735e623246f11ed53bf43926f9e5efc998c9f7e6681a8ef8bc650
 {% block title %}Nos annonces{% endblock %}
 
 {% block body %}
-<h1>Voici les annonces </h1>
+<h1 class=\"my-3\">Voici les annonces </h1>
 
-<div class=\"row\">
+<div class=\"row my-5\">
 {% for ad in ads %}
 {%include 'ad/_ad.html.twig' %}
 {% endfor %}

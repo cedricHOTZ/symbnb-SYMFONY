@@ -3,9 +3,9 @@
 {% block title %}Nos annonces{% endblock %}
 
 {% block body %}
-<h1>Voici les annonces </h1>
+<h1 class="my-3">Voici les annonces </h1>
 
-<div class="row">
+<div class="row my-5">
 {% for ad in ads %}
 {%include 'ad/_ad.html.twig' %}
 {% endfor %}

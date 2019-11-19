@@ -22,6 +22,7 @@ return [
         '/account/bookings' => [[['_route' => 'account_bookings', '_controller' => 'App\\Controller\\AccountController::bookings'], null, null, null, false, false, null]],
         '/ads' => [[['_route' => 'ads_index', '_controller' => 'App\\Controller\\AdController::index'], null, null, null, false, false, null]],
         '/ads/new' => [[['_route' => 'ads_create', '_controller' => 'App\\Controller\\AdController::create'], null, null, null, false, false, null]],
+        '/admin/ads' => [[['_route' => 'admin_ads_index', '_controller' => 'App\\Controller\\AdminAdController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList

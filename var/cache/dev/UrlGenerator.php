@@ -27,6 +27,7 @@ return [
     'ads_show' => [['slug'], ['_controller' => 'App\\Controller\\AdController::show'], [], [['variable', '/', '[^/]++', 'slug', true], ['text', '/ads']], [], []],
     'ads_edit' => [['slug'], ['_controller' => 'App\\Controller\\AdController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'slug', true], ['text', '/ads']], [], []],
     'ads_delete' => [['slug'], ['_controller' => 'App\\Controller\\AdController::delete'], [], [['text', '/delete'], ['variable', '/', '[^/]++', 'slug', true], ['text', '/ads']], [], []],
+    'admin_ads_index' => [[], ['_controller' => 'App\\Controller\\AdminAdController::index'], [], [['text', '/admin/ads']], [], []],
     'booking_create' => [['slug'], ['_controller' => 'App\\Controller\\BookingController::book'], [], [['text', '/book'], ['variable', '/', '[^/]++', 'slug', true], ['text', '/ads']], [], []],
     'booking_show' => [['id'], ['_controller' => 'App\\Controller\\BookingController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/booking']], [], []],
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],

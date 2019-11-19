@@ -96,7 +96,7 @@ class __TwigTemplate_20fa5d4a994c05835d9a56b3a9baca9598e623ebe467aabcd40dff414b3
       <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Voir nos annonces</a>
     </p>
 </div>
-<h2 class=\"h1 mt-3 mb-4\">Nos appartement stars</h2>
+<h2 class=\"h1 my-5\">Nos appartement stars</h2>
 <div class=\"row mt-5\">
   <div class=\"col-md-4\">
       <div class=\"card bg-light mb-3\">
@@ -139,7 +139,7 @@ class __TwigTemplate_20fa5d4a994c05835d9a56b3a9baca9598e623ebe467aabcd40dff414b3
       </div>
   </div>
   
-  <h2 class=\"h1 mt-3 mb-4\">Nos propriétaire stars</h2>
+  <h2 class=\"h1 my-5\">Nos propriétaire stars</h2>
     <div class=\"row mt-5\">
       <div class=\"col-md-6\">
         <div class=\"card border-secondary mb-3\">
@@ -209,7 +209,7 @@ Bienvenue sur le meilleur réseau d'appartement
       <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Voir nos annonces</a>
     </p>
 </div>
-<h2 class=\"h1 mt-3 mb-4\">Nos appartement stars</h2>
+<h2 class=\"h1 my-5\">Nos appartement stars</h2>
 <div class=\"row mt-5\">
   <div class=\"col-md-4\">
       <div class=\"card bg-light mb-3\">
@@ -252,7 +252,7 @@ Bienvenue sur le meilleur réseau d'appartement
       </div>
   </div>
   
-  <h2 class=\"h1 mt-3 mb-4\">Nos propriétaire stars</h2>
+  <h2 class=\"h1 my-5\">Nos propriétaire stars</h2>
     <div class=\"row mt-5\">
       <div class=\"col-md-6\">
         <div class=\"card border-secondary mb-3\">

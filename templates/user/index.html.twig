@@ -3,8 +3,8 @@
 {% block title %}Page de {{user.fullName}}{% endblock %}
 
 {% block body %}
-<div class="row">
-    <div class="col-3">
+<div class="row align-items-center mb-5">
+    <div class="col-3 text-center">
         <img src="{{user.picture}}" class="avatar" alt="avatar de {{user.fullName}}">
         <br>
         <span class="badge badge-primary">{{user.ads | length }} annonces</span>

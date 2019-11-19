@@ -86,8 +86,8 @@ class __TwigTemplate_32a1f53968f3a9a1765fe08dab614a4c76bfb3674c856753b7b8ba212b3
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"row\">
-    <div class=\"col-3\">
+        echo "<div class=\"row align-items-center mb-5\">
+    <div class=\"col-3 text-center\">
         <img src=\"";
         // line 8
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 8, $this->source); })()), "picture", [], "any", false, false, false, 8), "html", null, true);
@@ -223,8 +223,8 @@ class __TwigTemplate_32a1f53968f3a9a1765fe08dab614a4c76bfb3674c856753b7b8ba212b3
 {% block title %}Page de {{user.fullName}}{% endblock %}
 
 {% block body %}
-<div class=\"row\">
-    <div class=\"col-3\">
+<div class=\"row align-items-center mb-5\">
+    <div class=\"col-3 text-center\">
         <img src=\"{{user.picture}}\" class=\"avatar\" alt=\"avatar de {{user.fullName}}\">
         <br>
         <span class=\"badge badge-primary\">{{user.ads | length }} annonces</span>
