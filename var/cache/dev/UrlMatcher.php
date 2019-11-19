@@ -44,16 +44,22 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/ads/([^/]++)(?'
-                    .'|(*:185)'
-                    .'|/(?'
-                        .'|edit(*:201)'
-                        .'|delete(*:215)'
-                        .'|book(*:227)'
+                .'|/ad(?'
+                    .'|s/([^/]++)(?'
+                        .'|(*:188)'
+                        .'|/(?'
+                            .'|edit(*:204)'
+                            .'|delete(*:218)'
+                            .'|book(*:230)'
+                        .')'
+                    .')'
+                    .'|min/ads/([^/]++)/(?'
+                        .'|edit(*:264)'
+                        .'|delete(*:278)'
                     .')'
                 .')'
-                .'|/booking/([^/]++)(*:254)'
-                .'|/user/([^/]++)(*:276)'
+                .'|/booking/([^/]++)(*:305)'
+                .'|/user/([^/]++)(*:327)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -64,12 +70,14 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        185 => [[['_route' => 'ads_show', '_controller' => 'App\\Controller\\AdController::show'], ['slug'], null, null, false, true, null]],
-        201 => [[['_route' => 'ads_edit', '_controller' => 'App\\Controller\\AdController::edit'], ['slug'], null, null, false, false, null]],
-        215 => [[['_route' => 'ads_delete', '_controller' => 'App\\Controller\\AdController::delete'], ['slug'], null, null, false, false, null]],
-        227 => [[['_route' => 'booking_create', '_controller' => 'App\\Controller\\BookingController::book'], ['slug'], null, null, false, false, null]],
-        254 => [[['_route' => 'booking_show', '_controller' => 'App\\Controller\\BookingController::show'], ['id'], null, null, false, true, null]],
-        276 => [
+        188 => [[['_route' => 'ads_show', '_controller' => 'App\\Controller\\AdController::show'], ['slug'], null, null, false, true, null]],
+        204 => [[['_route' => 'ads_edit', '_controller' => 'App\\Controller\\AdController::edit'], ['slug'], null, null, false, false, null]],
+        218 => [[['_route' => 'ads_delete', '_controller' => 'App\\Controller\\AdController::delete'], ['slug'], null, null, false, false, null]],
+        230 => [[['_route' => 'booking_create', '_controller' => 'App\\Controller\\BookingController::book'], ['slug'], null, null, false, false, null]],
+        264 => [[['_route' => 'admin_ads_edit', '_controller' => 'App\\Controller\\AdminAdController::edit'], ['id'], null, null, false, false, null]],
+        278 => [[['_route' => 'admin_ads_delete', '_controller' => 'App\\Controller\\AdminAdController::delete'], ['id'], null, null, false, false, null]],
+        305 => [[['_route' => 'booking_show', '_controller' => 'App\\Controller\\BookingController::show'], ['id'], null, null, false, true, null]],
+        327 => [
             [['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::index'], ['slug'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

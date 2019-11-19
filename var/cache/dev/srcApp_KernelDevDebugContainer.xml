@@ -445,6 +445,9 @@
     <service id="App\Form\AccountType" class="App\Form\AccountType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\AdminBookingType" class="App\Form\AdminBookingType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\AjouterAnnonceType" class="App\Form\AjouterAnnonceType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -828,6 +831,7 @@
       </argument>
       <argument type="collection">
         <argument>App\Form\AccountType</argument>
+        <argument>App\Form\AdminBookingType</argument>
         <argument>App\Form\AjouterAnnonceType</argument>
         <argument>App\Form\ApplicationType</argument>
         <argument>App\Form\BookingType</argument>
@@ -1100,7 +1104,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.TP.emKl"/>
+      <argument type="service" id=".service_locator.SSowL_0"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4932,6 +4936,8 @@
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AccountType" class="App\Form\AccountType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\AccountType" class="App\Form\AccountType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AdminBookingType" class="App\Form\AdminBookingType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\AdminBookingType" class="App\Form\AdminBookingType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AjouterAnnonceType" class="App\Form\AjouterAnnonceType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\AjouterAnnonceType" class="App\Form\AjouterAnnonceType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ApplicationType" class="App\Form\ApplicationType" autowire="true" abstract="true"/>
@@ -5174,7 +5180,7 @@
         <argument key="user" type="service" id=".errored..service_locator.wypGnUQ.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.wtEaMyA" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator..UgSAGb" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountController::login" type="service" id=".service_locator.oHXyyai"/>
@@ -5187,6 +5193,8 @@
         <argument key="App\Controller\AdController::index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\AdController::show" type="service" id=".service_locator.YIUCPlB"/>
         <argument key="App\Controller\AdminAccountController::login" type="service" id=".service_locator.oHXyyai"/>
+        <argument key="App\Controller\AdminAdController::delete" type="service" id=".service_locator.0c_I6Iz"/>
+        <argument key="App\Controller\AdminAdController::edit" type="service" id=".service_locator.0c_I6Iz"/>
         <argument key="App\Controller\AdminAdController::index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\BookingController::book" type="service" id=".service_locator.0c_I6Iz"/>
         <argument key="App\Controller\BookingController::show" type="service" id=".service_locator.SjZfX2U"/>
@@ -5201,6 +5209,8 @@
         <argument key="App\Controller\AdController:index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\AdController:show" type="service" id=".service_locator.YIUCPlB"/>
         <argument key="App\Controller\AdminAccountController:login" type="service" id=".service_locator.oHXyyai"/>
+        <argument key="App\Controller\AdminAdController:delete" type="service" id=".service_locator.0c_I6Iz"/>
+        <argument key="App\Controller\AdminAdController:edit" type="service" id=".service_locator.0c_I6Iz"/>
         <argument key="App\Controller\AdminAdController:index" type="service" id=".service_locator.m2hZxMx"/>
         <argument key="App\Controller\BookingController:book" type="service" id=".service_locator.0c_I6Iz"/>
         <argument key="App\Controller\BookingController:show" type="service" id=".service_locator.SjZfX2U"/>
@@ -5266,10 +5276,11 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.TP.emKl" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.SSowL_0" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\AccountType" type="service" id="App\Form\AccountType"/>
+        <argument key="App\Form\AdminBookingType" type="service" id="App\Form\AdminBookingType"/>
         <argument key="App\Form\AjouterAnnonceType" type="service" id="App\Form\AjouterAnnonceType"/>
         <argument key="App\Form\ApplicationType" type="service" id="App\Form\ApplicationType"/>
         <argument key="App\Form\BookingType" type="service" id="App\Form\BookingType"/>
@@ -5632,12 +5643,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.wtEaMyA"/>
+      <argument type="service" id=".service_locator..UgSAGb"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.wtEaMyA"/>
+      <argument type="service" id=".service_locator..UgSAGb"/>
     </service>
     <service id=".service_locator.UwRI0uT" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
@@ -6018,7 +6029,7 @@
     <service id="Twig\Environment" alias="twig" public="false"/>
     <service id="logger" alias="monolog.logger"/>
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.wtEaMyA"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator..UgSAGb"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="validator" alias="debug.validator" public="true"/>

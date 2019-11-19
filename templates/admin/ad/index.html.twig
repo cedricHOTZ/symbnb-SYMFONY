@@ -32,11 +32,36 @@
             <span class="badge badge-primary rounded">{{ad.avgRatings |number_format(1,',','')}}</span>
         </td>
         <td class="text-center">
-            <a href=""class="btn btn-primary"><i class="fas fa-edit"></i></a>
-            <a href="" class="btn btn-danger"><i class="fas fa-trash"></i></aa>
+            <a href="{{path('admin_ads_edit', {'id': ad.id}) }}"class="btn btn-primary"><i class="fas fa-edit"></i></a>
+            <a href="{{path('admin_ads_delete',{'id': ad.id}) }}" class="btn btn-danger"><i class="fas fa-trash"></i></aa>
         </td>
     </tr>
     {% endfor %}
 </tbody>
 </table>
+<div class="d-flex justify-content-center">
+        <ul class = "pagination">
+          <li class = "élément de page désactivé">
+            <a class="page-link" href="#"> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> &laquo; </font> </font></a>
+          </li>
+          <li class = "élément de page actif">
+            <a class="page-link" href="#"> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> 1 </font> </font> </a>
+          </li>
+          <li class = "page-item">
+            <a class="page-link" href="#"> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> 2 </font> </font> </a>
+          </li>
+          <li class = "page-item">
+            <a class="page-link" href="#"> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> 3 </font> </font> </a>
+          </li>
+          <li class = "page-item">
+            <a class="page-link" href="#"> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> 4 </font> </font> </a>
+          </li>
+          <li class = "page-item">
+            <a class="page-link" href="#"> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> 5 </font> </font> </a>
+          </li>
+          <li class = "page-item">
+            <a class="page-link" href="#"> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> &raquo; </font> </font></a>
+          </li>
+        </ul>
+      </div>
 {% endblock %}

@@ -30,6 +30,8 @@ return [
     'admin_account_login' => [[], ['_controller' => 'App\\Controller\\AdminAccountController::login'], [], [['text', '/admin/login']], [], []],
     'admin_account_logout' => [[], ['_controller' => 'App\\Controller\\AdminAccountController::logout'], [], [['text', '/admin/logout']], [], []],
     'admin_ads_index' => [[], ['_controller' => 'App\\Controller\\AdminAdController::index'], [], [['text', '/admin/ads']], [], []],
+    'admin_ads_edit' => [['id'], ['_controller' => 'App\\Controller\\AdminAdController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/admin/ads']], [], []],
+    'admin_ads_delete' => [['id'], ['_controller' => 'App\\Controller\\AdminAdController::delete'], [], [['text', '/delete'], ['variable', '/', '[^/]++', 'id', true], ['text', '/admin/ads']], [], []],
     'booking_create' => [['slug'], ['_controller' => 'App\\Controller\\BookingController::book'], [], [['text', '/book'], ['variable', '/', '[^/]++', 'slug', true], ['text', '/ads']], [], []],
     'booking_show' => [['id'], ['_controller' => 'App\\Controller\\BookingController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/booking']], [], []],
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
