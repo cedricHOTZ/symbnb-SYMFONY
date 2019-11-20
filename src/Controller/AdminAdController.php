@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdminAdController extends AbstractController
 {
     /**
-     * @Route("/admin/ads", name="admin_ads_index")
+     * @Route("/admin/ads/{page<\d+>?1}", name="admin_ads_index", requirements={"page": "\d+"})
      */
     public function index(AdRepository $repo,$page = 1)
     {
@@ -33,13 +33,20 @@ class AdminAdController extends AbstractController
         $start = $page * $limit - $limit;
         //page1 * 10 = 10 - 10 = 0
         //page2 * 10 = 20 - 10 = 10
+        
+        //Pour trouver le nombre de page
+        $total = count($repo->findAll());
+        //fonction ceil de php qui arrondi au dessus
+        $pages = ceil($total / $limit);
 
         return $this->render('admin/ad/index.html.twig', [
             //1 tableau de critère de recherche
             //2 tableau de critère pour ordonner les informations
             //3 le nombre d'annonce par page
             //4 a partir de ou
-            'ads' => $repo->findBy([],[],$limit,$start)
+            'ads' => $repo->findBy([],[],$limit,$start),
+            'pages' => $pages,
+            'page' => $page
         ]);
     }
 

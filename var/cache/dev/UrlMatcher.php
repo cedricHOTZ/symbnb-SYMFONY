@@ -24,7 +24,7 @@ return [
         '/ads/new' => [[['_route' => 'ads_create', '_controller' => 'App\\Controller\\AdController::create'], null, null, null, false, false, null]],
         '/admin/login' => [[['_route' => 'admin_account_login', '_controller' => 'App\\Controller\\AdminAccountController::login'], null, null, null, false, false, null]],
         '/admin/logout' => [[['_route' => 'admin_account_logout', '_controller' => 'App\\Controller\\AdminAccountController::logout'], null, null, null, false, false, null]],
-        '/admin/ads' => [[['_route' => 'admin_ads_index', '_controller' => 'App\\Controller\\AdminAdController::index'], null, null, null, false, false, null]],
+        '/admin' => [[['_route' => 'admin_dashboard', '_controller' => 'App\\Controller\\AdminDashboardController::index'], null, null, null, true, false, null]],
         '/' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
@@ -53,13 +53,16 @@ return [
                             .'|book(*:230)'
                         .')'
                     .')'
-                    .'|min/ads/([^/]++)/(?'
-                        .'|edit(*:264)'
-                        .'|delete(*:278)'
+                    .'|min/ads(?'
+                        .'|(?:/(\\d+))?(*:261)'
+                        .'|/([^/]++)/(?'
+                            .'|edit(*:286)'
+                            .'|delete(*:300)'
+                        .')'
                     .')'
                 .')'
-                .'|/booking/([^/]++)(*:305)'
-                .'|/user/([^/]++)(*:327)'
+                .'|/booking/([^/]++)(*:328)'
+                .'|/user/([^/]++)(*:350)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -74,10 +77,11 @@ return [
         204 => [[['_route' => 'ads_edit', '_controller' => 'App\\Controller\\AdController::edit'], ['slug'], null, null, false, false, null]],
         218 => [[['_route' => 'ads_delete', '_controller' => 'App\\Controller\\AdController::delete'], ['slug'], null, null, false, false, null]],
         230 => [[['_route' => 'booking_create', '_controller' => 'App\\Controller\\BookingController::book'], ['slug'], null, null, false, false, null]],
-        264 => [[['_route' => 'admin_ads_edit', '_controller' => 'App\\Controller\\AdminAdController::edit'], ['id'], null, null, false, false, null]],
-        278 => [[['_route' => 'admin_ads_delete', '_controller' => 'App\\Controller\\AdminAdController::delete'], ['id'], null, null, false, false, null]],
-        305 => [[['_route' => 'booking_show', '_controller' => 'App\\Controller\\BookingController::show'], ['id'], null, null, false, true, null]],
-        327 => [
+        261 => [[['_route' => 'admin_ads_index', 'page' => '1', '_controller' => 'App\\Controller\\AdminAdController::index'], ['page'], null, null, false, true, null]],
+        286 => [[['_route' => 'admin_ads_edit', '_controller' => 'App\\Controller\\AdminAdController::edit'], ['id'], null, null, false, false, null]],
+        300 => [[['_route' => 'admin_ads_delete', '_controller' => 'App\\Controller\\AdminAdController::delete'], ['id'], null, null, false, false, null]],
+        328 => [[['_route' => 'booking_show', '_controller' => 'App\\Controller\\BookingController::show'], ['id'], null, null, false, true, null]],
+        350 => [
             [['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::index'], ['slug'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

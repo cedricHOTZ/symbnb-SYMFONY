@@ -159,27 +159,52 @@ class __TwigTemplate_891d4d768e6d363c6e6494639e931c8545e20b6811718d94fe698eef445
 </table>
 <div class=\"d-flex justify-content-center\">
         <ul class = \"pagination\">
-          <li class = \"élément de page désactivé\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> &laquo; </font> </font></a>
+          <li class = \"page-item ";
+        // line 44
+        if (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 44, $this->source); })()) == 1)) {
+            echo "disabled";
+        }
+        echo "\">
+            <a class=\"page-link\" href=\"";
+        // line 45
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_ads_index", ["page" => ((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 45, $this->source); })()) - 1)]), "html", null, true);
+        echo "\">  &laquo; </a>
           </li>
-          <li class = \"élément de page actif\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> 1 </font> </font> </a>
+          ";
+        // line 47
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["pages"]) || array_key_exists("pages", $context) ? $context["pages"] : (function () { throw new RuntimeError('Variable "pages" does not exist.', 47, $this->source); })())));
+        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+            // line 48
+            echo "          <li class = \"page-item ";
+            if (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 48, $this->source); })()) == $context["i"])) {
+                echo "active";
+            }
+            echo "\">
+            <a class=\"page-link\" href=\"";
+            // line 49
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_ads_index", ["page" => $context["i"]]), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $context["i"], "html", null, true);
+            echo " </a>
           </li>
-          <li class = \"page-item\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> 2 </font> </font> </a>
+          ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 52
+        echo "          <li class = \"page-item ";
+        if (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 52, $this->source); })()) == (isset($context["pages"]) || array_key_exists("pages", $context) ? $context["pages"] : (function () { throw new RuntimeError('Variable "pages" does not exist.', 52, $this->source); })()))) {
+            echo "disabled";
+        }
+        echo "\">
+                <a class=\"page-link\" href=\"";
+        // line 53
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_ads_index", ["page" => ((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 53, $this->source); })()) + 1)]), "html", null, true);
+        echo "\">  &raquo; </a>
           </li>
-          <li class = \"page-item\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> 3 </font> </font> </a>
-          </li>
-          <li class = \"page-item\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> 4 </font> </font> </a>
-          </li>
-          <li class = \"page-item\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> 5 </font> </font> </a>
-          </li>
-          <li class = \"page-item\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> &raquo; </font> </font></a>
-          </li>
+         
         </ul>
       </div>
 ";
@@ -203,7 +228,7 @@ class __TwigTemplate_891d4d768e6d363c6e6494639e931c8545e20b6811718d94fe698eef445
 
     public function getDebugInfo()
     {
-        return array (  158 => 40,  148 => 36,  144 => 35,  138 => 32,  132 => 29,  126 => 26,  120 => 25,  115 => 23,  111 => 22,  108 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  204 => 53,  197 => 52,  186 => 49,  179 => 48,  175 => 47,  170 => 45,  164 => 44,  158 => 40,  148 => 36,  144 => 35,  138 => 32,  132 => 29,  126 => 26,  120 => 25,  115 => 23,  111 => 22,  108 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -251,27 +276,18 @@ class __TwigTemplate_891d4d768e6d363c6e6494639e931c8545e20b6811718d94fe698eef445
 </table>
 <div class=\"d-flex justify-content-center\">
         <ul class = \"pagination\">
-          <li class = \"élément de page désactivé\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> &laquo; </font> </font></a>
+          <li class = \"page-item {% if page == 1%}disabled{% endif %}\">
+            <a class=\"page-link\" href=\"{{path('admin_ads_index',{'page': page -1}) }}\">  &laquo; </a>
           </li>
-          <li class = \"élément de page actif\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> 1 </font> </font> </a>
+          {% for i in 1..pages %}
+          <li class = \"page-item {% if page == i %}active{% endif %}\">
+            <a class=\"page-link\" href=\"{{ path('admin_ads_index',{'page': i })}}\">{{i}} </a>
           </li>
-          <li class = \"page-item\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> 2 </font> </font> </a>
+          {% endfor %}
+          <li class = \"page-item {% if page == pages %}disabled{% endif %}\">
+                <a class=\"page-link\" href=\"{{path('admin_ads_index',{'page': page +1}) }}\">  &raquo; </a>
           </li>
-          <li class = \"page-item\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> 3 </font> </font> </a>
-          </li>
-          <li class = \"page-item\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> 4 </font> </font> </a>
-          </li>
-          <li class = \"page-item\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> 5 </font> </font> </a>
-          </li>
-          <li class = \"page-item\">
-            <a class=\"page-link\" href=\"#\"> <font style = \"vertical-align: inherit;\"> <font style = \"vertical-align: inherit;\"> &raquo; </font> </font></a>
-          </li>
+         
         </ul>
       </div>
 {% endblock %}
